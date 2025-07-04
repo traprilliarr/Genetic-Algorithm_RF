@@ -8,22 +8,6 @@ from sklearn.metrics import accuracy_score
 
 script_directory = os.path.abspath(os.path.dirname(__file__))
 
-logo_path = os.path.join(script_directory, "logo.png")
-
-st.sidebar.markdown(f"""
-    <div style="border: 1px solid #ccc; border-radius: 5px; padding: 10px;">
-        <div style="display: flex; align-items: center; justify-content: space-between;">
-            <div style="display: flex; align-items: center;">
-                <img src="data:image/png;base64,{base64.b64encode(open(logo_path, 'rb').read()).decode()}" alt="Logo" style="height: 50px; width: 50px; margin-right: 10px;">
-                <div>
-                    <p style="margin: 0; font-size: 18px;">Nama: Citra Meida Antika</p>
-                    <p style="margin: 0; font-size: 18px;">NIM: 09021182025007</p>
-                </div>
-            </div>
-        </div>
-    </div>
-""", unsafe_allow_html=True)
-
 def main():
     st.sidebar.title('Navigation')
     page = st.sidebar.radio('Go to', ['Home', 'Predict'])
